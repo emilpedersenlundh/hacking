@@ -1,4 +1,5 @@
-output = eval(
+var output;
+eval(
   (function (p, a, c, k, e, r) {
     
     e = function (c) {
@@ -23,6 +24,7 @@ output = eval(
     }
     while (c--)
       if (k[c]) p = p.replace(new RegExp("\\b" + e(c) + "\\b", "g"), k[c]);
+    output = p;
     return p;
   })
   (
